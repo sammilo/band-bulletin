@@ -1,0 +1,15 @@
+.ViewEvents {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#default-text {
+    color: #b3c2db;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 100%;
+}
