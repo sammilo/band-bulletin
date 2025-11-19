@@ -6,14 +6,19 @@ import './EditEvent.css'
 const EditEvent = ({data}) => {
 
     const {id} = useParams()
-    const [post, setPost] = useState({id: null, creator: "", name: "", level: "", species: "", class: "", story: "", secret: ""})
+    const [post, setPost] = useState({id: null, title: "", img: "", bands: "", time: "", address: "", price: "", parking: "", description: ""})
 
     const updatePost = async (event) => {
         event.preventDefault()
 
         const updateData = {}
+
+        if (post.bands) {
+            updateData.bands = post.bands.split(',').map(b => b.trim())
+        }
+
         if (post.title) updateData.title = post.title
-        if (post.bands) updateData.bands = post.bands
+        if (post.img) updateData.img = post.img
         if (post.time) updateData.time = post.time
         if (post.address) updateData.address = post.address
         if (post.price) updateData.price = post.price
@@ -55,11 +60,15 @@ const EditEvent = ({data}) => {
                 <input type="text" id="title" name="title" value={post.title} onChange={handleChange} /><br />
                 <br/>
 
-                <label htmlFor="bands">Name</label><br />
-                <input type="text" id="bands" name="bands" value={post.bands} onChange={handleChange} /><br />
+                <label htmlFor="img">Image URL</label><br />
+                <input type="text" id="img" name="img" value={post.img} onChange={handleChange} /><br />
                 <br/>
 
-                <label htmlFor="time">Time</label><br />
+                <label htmlFor="bands">Band(s)</label><br />
+                <input type="text" id="bands" name="bands" value={post.bands} placeholder="Band1, Band2, Band3" onChange={handleChange} /><br />
+                <br/>
+
+                <label htmlFor="time">Date & Time</label><br />
                 <input type="text" id="time" name="time" value={post.time} onChange={handleChange} /><br />
                 <br/>
 
@@ -81,7 +90,7 @@ const EditEvent = ({data}) => {
                 </textarea>
                 <br />
 
-                <input type="submit" value="Submit" onClick={updatePost}/>
+                <input className="submitButton" type="submit" value="Submit" onClick={updatePost}/>
                 <button className="deleteButton" onClick={deletePost}>Delete</button>
             </form>
         </div>

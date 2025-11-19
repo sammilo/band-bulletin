@@ -1,13 +1,14 @@
 .DetailEvent {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
 }
 
 .postDetails {
     backdrop-filter: blur(2px);
-    border: 1px solid rgba(153, 153, 153, 0.497);
+    border: 5px solid #f7f0de;
     border-radius: 20px;
     padding: 40px;
     max-width: 600px;
@@ -16,15 +17,48 @@
 }
 
 .postDetails h2 {
-    color: white;
-    font-size: 32px;
+    color: #f7f0de;
+    text-shadow: #181528 4px 4px 6px;
+    font-size: 38px;
     margin-bottom: 20px;
     text-align: center;
 }
 
+.postDetails .bands {
+    color: #f7f0de;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.postDetails .time {
+    color: #f7f0de;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.postDetails .address {
+    color: #f7f0de;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.postDetails .price {
+    color: #f7f0de;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
 .postDetails p {
-    color: white;
-    font-size: 18px;
+    color: #f7f0de;
+    font-size: 20px;
     margin-bottom: 15px;
     line-height: 1.6;
 }
@@ -32,4 +66,48 @@
 .postDetails strong {
     color: #b3c2db;
     font-weight: 600;
+}
+
+.commentsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    max-width: 600px;          
+    width: 100%;
+    background-color: #f7f0de;
+    color: #181528;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 600px;         
+    gap: 10px;
+}
+
+.commentsList {
+    flex-grow: 1;            
+    overflow-y: auto;         
+    margin-bottom: 10px;
+}
+
+.comment {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background-color: #e2dede;
+    border-radius: 8px;
+}
+
+.commentForm {
+    flex-shrink: 0;           
+    display: flex;
+    justify-content: center;
+}
+
+.commentForm input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #322654;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #322654;
+    color: #f7f0de;
 }

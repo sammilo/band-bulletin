@@ -1,33 +1,45 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
   font-family:Avenir, "Century Gothic", sans-serif;
   font-weight:100; 
   font-style:normal;
   font-size: calc(10px + 2vmin);
-  color: white;
-  justify-content: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
   background-color: #181528;
   padding:20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.header{
+.btnContainer {
   width: 100%;
-  color:white;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 @font-face {
-  font-family: titleFont; 
+  font-family: titleFont;
   src: url(./fonts/HellForgeStacked.ttf) format("truetype"); 
 }
 
 h1 {
   font-family: titleFont;
   font-size: 70px;
+  color: #f7f0de;
+  text-shadow: #f8ca5f 2px 2px 4px;
 }
 
 .ViewEvents {
@@ -39,16 +51,16 @@ h1 {
 
 .viewBtn {
   border-radius: 8px;
-  margin: 10px;
   border: 3px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 15px;
+  padding: 0.6em 3.0em;
+  font-size: 24px;
   font-weight: 800;
   font-family: inherit;
   background-color: #322654;
   color:#B3C2DB;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 0 15px;
 }
 .viewBtn:hover {
   border-color: #7994be;
@@ -58,14 +70,15 @@ h1 {
 .addBtn {
   border-radius: 8px;
   border: 3px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 15px;
+  padding: 0.6em 3.0em;
+  font-size: 24px;
   font-weight: 800;
   font-family: inherit;
   background-color: #B3C2DB;
   color:#322654;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 0 15px;
 }
 .addBtn:hover {
   border-color: #322654;

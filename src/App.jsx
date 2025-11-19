@@ -28,15 +28,13 @@ const App = () => {
   ]);
 
   return ( 
-
     <div className="App">
-
-      <div className="header">
-        <h1>The Bands' Bulletin</h1>
+      <h1>The Bands' Bulletin</h1>
+      <div className="btnContainer">
         <Link to="/"><button className="viewBtn"> 🎶 View Events </button></Link>
         <Link to="/new"><button className="addBtn">🎵 Add Event </button></Link>
       </div>
-        {element}
+      {element}
     </div>
 
   )

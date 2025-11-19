@@ -1,62 +1,39 @@
 .Post {
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(153, 153, 153, 0.497);
+    background-color: #322654;
+    outline: 8px double #f7f0de;
     border-radius: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 10px;
-    margin-bottom: 25px;
+    padding: 20px;
     width: 400px;
     text-align: center;
 }
 
 .title {
-    color:white;
-    font-size: 18px;
-    padding-left: 20px;
+    color:#f7f0de;
+    text-shadow: #322654 1px 1px 2px;
+    font-size: 32px;
+    padding-left: 40px;
 }
 
 .bands {
-    color:white;
-    font-size: 24px;
+    color:#b3c2db;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.bandImage {
+    display: block;
+    margin: 0 auto 15px auto; 
+    outline: #181528 7px solid;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
 }
 
 .time {
-    color:white;
+    color:#f7f0de;
     margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.address {
-    color:white;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.price {
-    color:white;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.parking {
-    color:white;  
-    text-align: justify;
-    text-justify: inter-word;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-    font-size: 15px;
-}
-
-.description {
-    color:white;  
-    text-align: justify;
-    text-justify: inter-word;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 18px;
+    font-style: italic;
 }
 
 .likeButton {
