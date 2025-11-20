@@ -1,4 +1,4 @@
-# Web Development Final Project - *The Bands' Bulleting*
+# Web Development Final Project - *The Bands' Bulletin*
 
 Submitted by: **Samantha Milo**
 
